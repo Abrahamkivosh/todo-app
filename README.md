@@ -28,18 +28,19 @@ Before you begin, make sure you have the following installed:
 2. Open the `.env` file in a text editor and set the following environment variables:
    - `DEBUG`: Set to `True` for development mode, and `False` for production mode.
    - `SECRET_KEY`: Django secret key for secure sessions. Generate one using `python -c 'import secrets; print(secrets.token_hex(24))'`.
-   - `DB_NAME`: Name of the PostgreSQL database.
-   - `DB_USER`: PostgreSQL username.
-   - `DB_PASSWORD`: PostgreSQL password.
-   - `DB_HOST`: Hostname for the PostgreSQL database (use `db` if running with Docker Compose).
-   - `DB_PORT`: PostgreSQL port (default is `5432`).
+   - `POSTGRES_DB`: Name of the PostgreSQL database.
+   - `POSTGRES_USER`: PostgreSQL username.
+   - `POSTGRES_PASSWORD`: PostgreSQL password.
+   - `POSTGRES_HOST`: Hostname for the PostgreSQL database (use `db` if running with Docker Compose).
+   - `POSTGRES_PORT`: PostgreSQL port (default is `5432`).
    - `PGADMIN_DEFAULT_EMAIL`: Email for the pgAdmin admin user.
    - `PGADMIN_DEFAULT_PASSWORD`: Password for the pgAdmin admin user.
+   - `PGADMIN_LISTEN_PORT` : pgadmin port (default is `5050`)
 
 ### Building and Running
 
-1. Clone this repository: `git clone https://github.com/yourusername/todo-django-docker.git`
-2. Navigate to the project directory: `cd todo-django-docker`
+1. Clone this repository: `git clone https://github.com/Abrahamkivosh/todo-app.git`
+2. Navigate to the project directory: `cd todo-app`
 3. Build and start the Docker containers: `docker-compose up -d --build`
 4. Apply database migrations: `docker-compose exec web python manage.py migrate`
 5. Create a superuser for Django admin access: `docker-compose exec web python manage.py createsuperuser`

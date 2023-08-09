@@ -1,0 +1,25 @@
+# Docker ignore file for the django project
+# This file is used to ignore the files that are not required in the docker image
+
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+*.so
+*.egg
+*.egg-info
+**/migrations/*
+**/static/*
+**/node_modules/*
+
+# Ignore the virtual environment
+venv
+
+# Ignore the database
+db.sqlite3
+
+# Ignore the media files
+media
+
+# Ignore the logs
+logs

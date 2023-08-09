@@ -42,8 +42,8 @@ Before you begin, make sure you have the following installed:
 1. Clone this repository: `git clone https://github.com/Abrahamkivosh/todo-app.git`
 2. Navigate to the project directory: `cd todo-app`
 3. Build and start the Docker containers: `docker-compose up -d --build`
-4. Apply database migrations: `docker-compose exec web python manage.py migrate`
-5. Create a superuser for Django admin access: `docker-compose exec web python manage.py createsuperuser`
+4. Apply database migrations: `docker-compose exec app python manage.py migrate`
+5. Create a superuser for Django admin access: `docker-compose exec app python manage.py createsuperuser`
 
 Your ToDo application should now be up and running!
 
